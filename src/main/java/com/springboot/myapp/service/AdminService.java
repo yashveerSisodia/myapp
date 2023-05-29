@@ -9,4 +9,6 @@ public interface AdminService {
 
 	void addUpdateAdminUser(@Valid AddUpdateAdminUserDto addUpdateAdminUserDto) throws CustomException;
 
+	Object getAdminUserByUserId(Integer userId);
+
 }
