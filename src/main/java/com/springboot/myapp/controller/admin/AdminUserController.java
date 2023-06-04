@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.myaap.utils.CommonResponse;
@@ -50,6 +51,15 @@ public class AdminUserController {
 	ResponseEntity<CommonResponse> getAdminUserByUserId(@PathVariable("userId") Integer userId) {
 
 		return new ResponseEntity<>(ResponseUtil.prepareSuccessResponse(adminService.getAdminUserByUserId(userId)), HttpStatus.OK);
+
+	}
+	
+	@GetMapping("/admin-user")
+	ResponseEntity<CommonResponse> getAdminUser(
+			@RequestParam(value="_page", defaultValue="0") Integer page,
+			@RequestParam(value="_limit", defaultValue="10") Integer limit) {
+
+		return new ResponseEntity<>(ResponseUtil.prepareSuccessResponse(adminService.getAdminUser(page,limit)), HttpStatus.OK);
 
 	}
 }

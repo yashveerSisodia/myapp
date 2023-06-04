@@ -11,45 +11,45 @@ import lombok.Setter;
 @Setter
 public class AddUpdateAdminUserDto {
 
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-
-	public String getUserEmail() {
-		return userEmail;
-	}
-
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public Long getMob() {
-		return mob;
-	}
-
-	public void setMob(Long mob) {
-		this.mob = mob;
-	}
+//	public Integer getUserId() {
+//		return userId;
+//	}
+//
+//	public void setUserId(Integer userId) {
+//		this.userId = userId;
+//	}
+//
+//	public String getUserEmail() {
+//		return userEmail;
+//	}
+//
+//	public void setUserEmail(String userEmail) {
+//		this.userEmail = userEmail;
+//	}
+//
+//	public String getFirstName() {
+//		return firstName;
+//	}
+//
+//	public void setFirstName(String firstName) {
+//		this.firstName = firstName;
+//	}
+//
+//	public String getLastName() {
+//		return lastName;
+//	}
+//
+//	public void setLastName(String lastName) {
+//		this.lastName = lastName;
+//	}
+//
+//	public Long getMob() {
+//		return mob;
+//	}
+//
+//	public void setMob(Long mob) {
+//		this.mob = mob;
+//	}
 
 	@NotNull(message="user id can not be null")
 	@JsonProperty("user_id")
@@ -68,4 +68,7 @@ public class AddUpdateAdminUserDto {
 	
 	@JsonProperty("mob")
 	private Long mob;
+	
+	@JsonProperty("user_pass")
+	private String userPass;
 }

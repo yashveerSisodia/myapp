@@ -18,4 +18,7 @@ public interface AdminUserRepoDto {
 	
 	@JsonProperty("mob")
 	String getMOB();
+	
+	@JsonProperty("user_pass")
+	String getUSER_PASS();
 }

@@ -12,39 +12,42 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@AllArgsConstructor
+@AllArgsConstructor 
 @Table(name="admin_user", schema = "admin")
 public class AdminUserEntity {
-	public Integer getUserId() {
-		return userId;
+public AdminUserEntity() {
+		// TODO Auto-generated constructor stub
 	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-	public String getUserEmail() {
-		return userEmail;
-	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
-	}
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-	public Long getMob() {
-		return mob;
-	}
-	public void setMob(Long mob) {
-		this.mob = mob;
-	}
+	//	public Integer getUserId() {
+//		return userId;
+//	}
+//	public void setUserId(Integer userId) {
+//		this.userId = userId;
+//	}
+//	public String getUserEmail() {
+//		return userEmail;
+//	}
+//	public void setUserEmail(String userEmail) {
+//		this.userEmail = userEmail;
+//	}
+//	public String getFirstName() {
+//		return firstName;
+//	}
+//	public void setFirstName(String firstName) {
+//		this.firstName = firstName;
+//	}
+//	public String getLastName() {
+//		return lastName;
+//	}
+//	public void setLastName(String lastName) {
+//		this.lastName = lastName;
+//	}
+//	public Long getMob() {
+//		return mob;
+//	}
+//	public void setMob(Long mob) {
+//		this.mob = mob;
+//	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer userId;
@@ -53,5 +56,6 @@ public class AdminUserEntity {
 	private String firstName;
 	private String lastName;
 	private Long mob;
+	private String userPass;
 
 }

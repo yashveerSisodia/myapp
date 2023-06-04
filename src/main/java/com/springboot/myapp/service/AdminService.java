@@ -11,4 +11,6 @@ public interface AdminService {
 
 	Object getAdminUserByUserId(Integer userId);
 
+	Object getAdminUser(Integer page, Integer limit);
+
 }
